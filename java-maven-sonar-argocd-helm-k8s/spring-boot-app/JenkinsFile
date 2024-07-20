@@ -41,7 +41,7 @@ pipeline {
                     git config user.email "sharmashaurya363@gmail.com"
                     git config user.name "Shaurya Sharma"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    docker run -d -p 8081:8080 $DOCKER_IMAGE
+                    docker run -d -p 8081:8080 sharmashaurya363/ultimate-cicd:${BUILD_NUMBER}
                     #sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" /home/bhavukm/spring-boot-app-manifests/deployment.yml
                     #git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                     #git commit -m "Update deployment image to version ${BUILD_NUMBER}"
