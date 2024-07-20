@@ -14,7 +14,6 @@ pipeline {
         sh 'cd /home/bhavukm/spring-boot-app && mvn clean package'
       }
     }
-    }
     stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "sharmashaurya363/ultimate-cicd:${BUILD_NUMBER}"
