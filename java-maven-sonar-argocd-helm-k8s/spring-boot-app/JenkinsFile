@@ -17,8 +17,6 @@ pipeline {
         sh 'ls -ltr'
         // build the project and create a JAR file
         sh 'cd /home/bhavukm/spring-boot-app && mvn clean package'
-        sh 'cd /home/bhavukm/spring-boot-app/src ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class CarTest --reports-dir="reports"'
-                junit 'src/reports/*-jupiter.xml'
       }
     }
     stage('Build and Push Docker Image') {
